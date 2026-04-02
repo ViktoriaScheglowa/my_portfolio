@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виктория | Премиальные веб-решения для бизнеса</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+        :root {
+            /* Сделали глубокий чистый черный без зеленого оттенка */
+            --bg-black: #050505;
+            --gold-bright: #fef08a;
+            --gold-main: #eab308;
+            --gold-dark: #854d0e;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-black);
+            /* Строгий радиальный градиент от темно-серого к черному */
+            background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, var(--bg-black) 70%);
+            color: #ffffff;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .gold-text {
+            background: linear-gradient(to bottom, #fff 0%, var(--gold-bright) 20%, var(--gold-main) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
+        }
+
+        .gold-button {
+            background: linear-gradient(135deg, #fef9c3 0%, var(--gold-main) 50%, var(--gold-dark) 100%);
+            color: #021a15;
+            box-shadow: 0 10px 30px -5px rgba(234, 179, 8, 0.4);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .gold-button:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 20px 40px -10px rgba(234, 179, 8, 0.6);
+        }
+
+        .premium-glass {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(234, 179, 8, 0.15);
+            backdrop-filter: blur(12px);
+        }
+
+        .icon-gold {
+            filter: drop-shadow(0 0 8px rgba(234, 179, 8, 0.3));
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+
+    <nav class="fixed top-6 w-[95%] max-w-6xl z-50">
+        <div class="premium-glass rounded-2xl px-6 md:px-10 py-3 flex justify-between items-center">
+            <div class="text-lg md:text-xl font-black tracking-tighter shrink-0 italic">VICTORIA<span
+                    class="text-yellow-500">.DEV</span></div>
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest opacity-70">
+                <a href="#services" class="hover:text-yellow-500 transition">Экспертиза</a>
+                <a href="#projects" class="hover:text-yellow-500 transition">Кейсы</a>
+            </div>
+            <a href="#contact" class="gold-button px-6 py-2 rounded-xl font-black text-[10px] md:text-xs uppercase">
+                Обсудить проект
+            </a>
+        </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-24 px-6 w-full max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+
+            <div class="text-left hero-content">
+                <h2 class="text-yellow-600 font-bold tracking-[0.5em] mb-4 uppercase text-[10px] md:text-xs">
+                    Высококонверсионная разработка</h2>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tighter">
+                    Превращаю трафик <br> в <span class="gold-text">реальную прибыль.</span>
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl mb-10 leading-relaxed font-light max-w-xl">
+                    Забудьте про "просто красивые визитки". Я проектирую премиальные веб-решения под ключ, которые
+                    вызывают доверие, удерживают внимание и продают ваш продукт 24/7.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact"
+                        class="gold-button px-10 py-4 rounded-2xl font-black text-sm uppercase tracking-widest">Бесплатный
+                        аудит</a>
+                    <a href="#services"
+                        class="premium-glass px-10 py-4 rounded-2xl font-bold text-sm uppercase tracking-widest hover:border-yellow-500 transition">Мой
+                        подход</a>
+                </div>
+            </div>
+
+            <div class="relative hero-image hidden md:flex justify-center">
+                <div class="absolute inset-0 bg-yellow-500/10 blur-3xl rounded-full w-3/4 h-3/4 m-auto"></div>
+                <img src="img/victoria.png" alt="Виктория - Web Developer"
+                    class="w-full max-w-md object-cover rounded-[3rem] relative z-10 border border-yellow-500/30 shadow-2xl">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="services" class="py-24 w-full max-w-7xl px-6 text-center">
+        <h2 class="text-4xl font-black mb-20 uppercase tracking-[0.2em] opacity-80">Как я решаю задачи бизнеса</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <div
+                class="premium-glass p-12 rounded-[3rem] group hover:bg-white/[0.04] transition duration-500 text-left">
+                <div class="mb-8">
+                    <svg class="w-12 h-12 icon-gold" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" stroke="url(#gold_grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <defs>
+                            <linearGradient id="gold_grad" x1="0" y1="0" x2="1" y2="1">
+                                <stop stop-color="#fef08a"></stop>
+                                <stop offset="1" stop-color="#a16207"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 gold-text uppercase tracking-tight">Надежная архитектура</h3>
+                <p class="text-gray-400 leading-relaxed text-sm">Пишу чистый код. Никаких упавших серверов в моменты
+                    пикового трафика и потерянных заявок. Ваш бизнес работает как швейцарские часы.</p>
+            </div>
+
+            <div
+                class="premium-glass p-12 rounded-[3rem] group hover:bg-white/[0.04] transition duration-500 text-left">
+                <div class="mb-8">
+                    <svg class="w-12 h-12 icon-gold" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#gold_grad)" stroke-width="2"></path>
+                        <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="url(#gold_grad)" stroke-width="2"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 gold-text uppercase tracking-tight">Дорогой UI/UX</h3>
+                <p class="text-gray-400 leading-relaxed text-sm">Упаковываю ваши смыслы в премиальный дизайн. Создаю
+                    визуальный путь, по которому клиент сам хочет дойти до кнопки "Оплатить".</p>
+            </div>
+
+            <div
+                class="premium-glass p-12 rounded-[3rem] group hover:bg-white/[0.04] transition duration-500 text-left">
+                <div class="mb-8">
+                    <svg class="w-12 h-12 icon-gold" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 7H21M21 7V15M21 7L13 15L9 11L3 17" stroke="url(#gold_grad)" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4 gold-text uppercase tracking-tight">Лидогенерация</h3>
+                <p class="text-gray-400 leading-relaxed text-sm">Внедряю SEO и маркетинговые триггеры. Снижаем стоимость
+                    привлечения клиента (CAC) и увеличиваем пожизненную ценность (LTV).</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 w-full max-w-7xl px-6 text-center">
+        <h2 class="text-3xl font-black mb-16 uppercase tracking-widest opacity-80">Проекты & Оцифрованный опыт</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div
+                class="premium-glass p-10 rounded-3xl border border-white/10 flex flex-col items-start justify-center text-left hover:border-yellow-500/30 transition">
+                <span class="text-yellow-500 font-bold mb-2 uppercase text-xs tracking-widest">E-commerce /
+                    Ритейл</span>
+                <h4 class="text-2xl font-black mb-4">Редизайн магазина премиум-одежды</h4>
+                <p class="text-gray-400 text-sm">Увеличение конверсии в покупку на 34% за счет переработки логики
+                    корзины и внедрения минималистичного UI-кита.</p>
+            </div>
+            <div
+                class="premium-glass p-10 rounded-3xl border border-white/10 flex flex-col items-start justify-center text-left hover:border-yellow-500/30 transition">
+                <span class="text-yellow-500 font-bold mb-2 uppercase text-xs tracking-widest">B2B / Услуги</span>
+                <h4 class="text-2xl font-black mb-4">Корпоративный сайт для консалтинга</h4>
+                <p class="text-gray-400 text-sm">Снижение показателя отказов (Bounce Rate) в 2.5 раза. Сайт выведен в
+                    зеленую зону Google PageSpeed (98/100).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 w-full max-w-5xl px-6">
+        <div
+            class="premium-glass p-10 md:p-16 rounded-[4rem] flex flex-col items-center text-center gap-8 border-yellow-500/20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-yellow-500/5 blur-3xl rounded-full"></div>
+
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-5xl font-black mb-4"><span class="gold-text">Готовы масштабироваться?</span>
+                </h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-8">Давайте проведем 15-минутный созвон. Я изучу ваш текущий
+                    сайт и покажу 2-3 точки роста, которые принесут деньги уже в этом месяце.</p>
+
+                <div class="flex flex-col gap-6 items-center">
+                    <a href="tel:+79053662275"
+                        class="text-3xl md:text-4xl font-bold hover:text-yellow-500 transition">+7 (905) 366-22-75</a>
+
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <a href="https://t.me/SViktory83" target="_blank"
+                            class="gold-button px-8 py-4 rounded-xl font-bold text-sm uppercase">Написать в Telegram</a>
+                        <a href="https://max.ru/u/f9LHodD0cOLqiol4rDAoO9ZySz25G3uyLGxJooQySVdn8ZBrnlasIdsX0AU"
+                            target="_blank"
+                            class="premium-glass px-8 py-4 rounded-xl font-bold text-sm uppercase border-white/20 hover:border-yellow-500 transition">Профиль
+                            MAX</a>
+                    </div>
+
+                    <a href="mailto:vika.scheglowa@yandex.ru"
+                        class="text-gray-500 hover:text-white transition mt-4 border-b border-gray-600 pb-1">vika.scheglowa@yandex.ru</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 opacity-30 text-[10px] tracking-[0.5em] uppercase text-center w-full">
+        © 2026 Victoria Dev • Спроектировано для генерации прибыли
+    </footer>
+
+    <script>
+        // Анимация текста
+        gsap.from(".hero-content > *", {
+            y: 40,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power4.out"
+        });
+
+        // Плавное появление фото
+        gsap.from(".hero-image", {
+            x: 40,
+            opacity: 0,
+            duration: 1.5,
+            delay: 0.4,
+            ease: "power3.out"
+        });
+    </script>
+
+</body>
+
+</html>
